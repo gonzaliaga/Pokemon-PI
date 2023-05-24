@@ -6,7 +6,7 @@ function Navbar() {
 
   const [clicked, setClicked] = useState(false)
   const handleClick = () => {
-    //cuando esta true lo pasa a false y vice versa
+
     setClicked(!clicked)
   }
   return (
@@ -30,6 +30,7 @@ function Navbar() {
 export default Navbar
 
 const NavContainer = styled.nav`
+border-top: 10px #333;
   h2{
     color: white;
     font-weight: 400;
@@ -37,8 +38,9 @@ const NavContainer = styled.nav`
       font-weight: bold;
     }
   }
-  padding: .4rem;
-  background-color: #333;
+
+  padding: .8rem;
+  background: linear-gradient(60deg, rgba(0,28,177,1) 2%, rgba(30,2,146,1) 66%, rgba(31,2,98,1) 100%);
   display: flex;
   align-items: center;
   justify-content: space-between;
