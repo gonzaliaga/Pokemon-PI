@@ -4,8 +4,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { postPokemon, getTypes, getPokemons } from '../../actions/index';
 import style from './PokemonCreate.module.css'
 import validate from './validate.js';
-import Oak from '../../images/profesor.png'
+import Oak from '../../images/portada.png'
 import swal from 'sweetalert';
+/* import Navbar from '../Navbar/Navbar';
+import Footer from "../footer/footer"; */
 
 
 export default function PokemonCreate(){
@@ -76,7 +78,7 @@ export default function PokemonCreate(){
         Object.keys(errors).length === 1 && errors.types.length ?
             setSection(section === 1 ? 2 : 1) 
             :
-            swal("You must complete the form correctly!", "", "error");
+            swal("¡Debes completar el formulario correctamente!", "", "error");
     }
 
     function handleChecked(e){
@@ -110,7 +112,7 @@ export default function PokemonCreate(){
         if(Object.keys(errors).length === 0 && input.name.length){
             dispatch(postPokemon(input));
             dispatch(getPokemons());
-            swal("Bien!", "Pokemon Creado!", "éxito");
+            swal("Bien!", "Pokémon Creado! :)", "success");
             setInput({
                 name: '',
                 hp: '',
@@ -130,8 +132,10 @@ export default function PokemonCreate(){
 
     return(
         <div className={style.pagina}>
-            <img src={Oak} alt="Profesor Oak" height="560px" className={style.img}/>
-            <Link to='/home' className={style.back} style={{textDecoration: 'none'}}><button>Return home</button></Link>
+            
+           
+            <img src={Oak} alt="Pikachu" height="560px" className={style.img}/>
+            <Link to='/home' className={style.back} style={{textDecoration: 'none'}}><button>Volver al Home</button></Link>
             <div className={style.container}>
                 <div className={style.header}>
                     <h2>Crea tu Pokémon!</h2>
@@ -341,6 +345,7 @@ export default function PokemonCreate(){
                     
 
                 </form>
+                
             </div>
 
         </div>

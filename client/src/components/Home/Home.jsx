@@ -9,6 +9,7 @@ import random from '../../images/random.png';
 import style from './Home.module.css';
 import poke from '../../images/pokebola.png';
 /* import game from '../../images/game.png'; */
+import Footer from "../footer/footer";
 
 
 export default function Home() {
@@ -65,11 +66,13 @@ export default function Home() {
 
     return (
         <div className={style.home}>
-
+            <div className={style.nav}>
             <Navbar />
+            </div>
+
 
             <br/>
- {/*             {<Link to='/game' style={{ textDecoration: 'none' }} className={style.game}><button className={style.poke}><img src={game} alt="Who's that Pokemon" width='100px' /></button></Link>}
+{/*              {<Link to='/game' style={{ textDecoration: 'none' }} className={style.game}><button className={style.poke}><img src={game} alt="Who's that Pokemon" width='100px' /></button></Link>}
  */}            <div className={style.sortfilter}>
 
                 <select onChange={e => handleSort(e)}>
@@ -93,7 +96,7 @@ export default function Home() {
                     }
                 </select>
                 <br/>
-                <button  onClick={e => { handleClick(e) }} className={style.poke}><img src={poke} alt="pokebola" width='20px' /> Cargar Todos!</button>
+                <button  onClick={e => { handleClick(e) }} className={style.poke}><img src={poke} alt="pokebola" width='20px' /> Recargar!</button>
             </div>
             <br/>
             <Paginado
@@ -128,6 +131,7 @@ export default function Home() {
                         </div>
                 }
             </div>
+            <Footer />
         </div>
     )
 }

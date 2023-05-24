@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import PokemonCreate from './components/PokemonCreate/PokemonCreate'
 import Detail from './components/Detail/Detail'
 import Game from './components/Game/Game';
+import Acerca from './components/Acerca/Acerca.jsx';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/game" component={Game}/>
           <Route path="/pokemons" component={PokemonCreate}/>
           <Route exact path="/home/:id" component={Detail}/>
+          <Route exact path="/Acerca" component={Acerca}/>
         </Switch>
       </div>
     </BrowserRouter>

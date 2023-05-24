@@ -51,6 +51,7 @@
   "devDependencies": {
     "@types/react": "^18.2.6",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
-    "redux-mock-store": "^1.5.4"
+    "redux-mock-store": "^1.5.4",
+    "styled-components": "^5.3.10"
   }
 }
