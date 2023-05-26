@@ -18,7 +18,7 @@ function App() {
           <Route exact path="/game" component={Game}/>
           <Route path="/pokemons" component={PokemonCreate}/>
           <Route exact path="/home/:id" component={Detail}/>
-          <Route exact path="/Acerca" component={Acerca}/>
+          <Route exact path="/acerca" component={Acerca}/>
         </Switch>
       </div>
     </BrowserRouter>

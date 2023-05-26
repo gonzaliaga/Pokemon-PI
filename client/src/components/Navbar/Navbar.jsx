@@ -1,7 +1,10 @@
+
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import BurguerButton from './BurgerButton'
-
+import SearchBar from '../SearchBar/SearchBar'
+import imagenLogo from '../../images/pokemon.png'
+import { useLocation } from 'react-router-dom';
 
 
 function Navbar() {
@@ -11,14 +14,22 @@ function Navbar() {
 
     setClicked(!clicked)
   }
+  const location = useLocation();
+  const isHomePage = location.pathname === "/home";
+  const isPokemonsPage = location.pathname === "/pokemons";
+  const isAcercaPage = location.pathname === "/acerca";
+
   return (
     <>
-      <NavContainer>
-        <h2>Navbar <span>Responsive</span></h2>
+
+      <NavContainer >
+      <img src={imagenLogo} alt="Logo" style={{ width: '150px', height: '70px', zIndex: 100 }}/>
+        <br/>
+        {!isPokemonsPage && !isAcercaPage && <SearchBar/>}
         <div className={`links ${clicked ? 'active' : ''}`}>
-          <a onClick={handleClick} href="/home">Inicio</a>
-          <a onClick={handleClick} href="/pokemons">Crear</a>
-          <a onClick={handleClick} href="/Acerca">Acerca de</a>
+        {!isHomePage && <a onClick={handleClick} href="/home">Inicio</a>}
+        {!isPokemonsPage && <a onClick={handleClick} href="/pokemons">Crear</a>}
+        {!isAcercaPage && <a onClick={handleClick} href="/acerca">Acerca</a>}
         </div>
         <div className='burguer'>
           <BurguerButton clicked={clicked} handleClick={handleClick} />
@@ -41,9 +52,14 @@ border-bottom: 10px;
       font-weight: bold;
     }
   }
+  img {
+    z-indez:1;
+  }
   padding: .8rem;
-  background: linear-gradient(0deg, rgba(4,0,18,1) 1%, rgba(0,28,177,1) 4%, rgba(30,2,146,1) 65%, rgba(31,2,98,1) 89%, rgba(1,8,46,1) 100%);
+  background-color: rgba(0, 10, 63, 0.5);
+  /* background: linear-gradient(0deg, rgba(4,0,18,1) 1%, rgba(0,28,177,1) 4%, rgba(30,2,146,1) 65%, rgba(31,2,98,1) 89%, rgba(1,8,46,1) 100%); */
   display: flex;
+  flexDirection: column;
   align-items: center;
   justify-content: space-between;
   a{
@@ -59,11 +75,13 @@ border-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    transition: all .5s ease;
+    transition: all .6s ease;
+    z-indez: 20;
     a{
       color: white;
       font-size: 2rem;
       display: block;
+    
     }
     @media(min-width: 768px){
       position: initial;
@@ -86,23 +104,26 @@ border-bottom: 10px;
     left: 0;
     right: 0;
     text-align: center;
+    z-index: 20;
     a{
       font-size: 2rem;
       margin-top: 1rem;
       color: white;
+    
     }
   }
   .burguer{
     @media(min-width: 768px){
       display: none;
     }
+    z-index: 20;
   }
 `
 
 const BgDiv = styled.div`
-  background-color: #222;
+  background-color: #000a3f;
   position: absolute;
-  top: -1000px;
+  top: -700px;
   left: -1000px;
   width: 100%;
   height: 100%;
@@ -114,6 +135,8 @@ const BgDiv = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 300px;
+    z-index: 1;
+    
   }
 `
