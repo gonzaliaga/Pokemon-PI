@@ -117,6 +117,21 @@
   /*       filter: drop-shadow(0 0 0.75rem rgb(244, 242, 242)); */
 }
 
+.icon-wtsapp {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-image: url(../../images/iconos/wtsapp.png);
+  background-size: cover;
+  margin-right: 10px;
+  /* Espacio horizontal entre los iconos */
+}
+
+.icon-wtsapp:hover {
+  transform: rotate3d(1, 2.0, 3.0, 20deg);
+  /*       filter: drop-shadow(0 0 0.75rem rgb(244, 242, 242)); */
+}
+
 .icon-pokemon {
   cursor: pointer;
   width: 50px;

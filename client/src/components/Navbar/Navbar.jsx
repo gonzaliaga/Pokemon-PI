@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import BurguerButton from './BurgerButton'
 
+
+
 function Navbar() {
 
   const [clicked, setClicked] = useState(false)
@@ -30,7 +32,8 @@ function Navbar() {
 export default Navbar
 
 const NavContainer = styled.nav`
-border-top: 10px #333;
+border-top: 10px;
+border-bottom: 10px;
   h2{
     color: white;
     font-weight: 400;
@@ -38,9 +41,8 @@ border-top: 10px #333;
       font-weight: bold;
     }
   }
-
   padding: .8rem;
-  background: linear-gradient(60deg, rgba(0,28,177,1) 2%, rgba(30,2,146,1) 66%, rgba(31,2,98,1) 100%);
+  background: linear-gradient(0deg, rgba(4,0,18,1) 1%, rgba(0,28,177,1) 4%, rgba(30,2,146,1) 65%, rgba(31,2,98,1) 89%, rgba(1,8,46,1) 100%);
   display: flex;
   align-items: center;
   justify-content: space-between;

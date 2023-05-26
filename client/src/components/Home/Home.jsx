@@ -22,7 +22,7 @@ export default function Home() {
     const [pokLoaded, /* setPokLoaded */] = useState(all.length ? true : false)
     const [/* orden */, setOrden] = useState('')
     const [currentPage, setCurrentPage] = useState(1);
-    const [pokemonsPerPage, /* setPokemonsPerPage */] = useState(8)
+    const [pokemonsPerPage, /* setPokemonsPerPage */] = useState(12)
     const indexOfLastPokemon = currentPage * pokemonsPerPage;
     const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage;
     const currentPokemons = allPokemons.slice(indexOfFirstPokemon, indexOfLastPokemon)

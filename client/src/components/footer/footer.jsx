@@ -27,6 +27,11 @@ const Footer = () => {
               <div className="icon-github"></div>
             </a>
           </li>
+          <li>
+            <a href="https://wa.link/nf9h8x" target="_blank" rel="noreferrer">
+              <div className="icon-wtsapp"></div>
+            </a>
+          </li>
         </ul>
 
       </div>
