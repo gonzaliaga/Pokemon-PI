@@ -17,21 +17,17 @@ export default function LandingPage() {
 
   return (
     <div className={style.main}>
-      <div className={style.overlay}></div>
-      <video src={videoBG} autoPlay loop muted />
+      <div className={style.overlay}>
+        <video src={videoBG}  autoPlay loop muted />
+      </div>
       <div className={style.content}>
         <h1 className={style.titulo}>Pokémon</h1>
         <h2 className={style.texto}>¡Atrápalos a todos!
           <br />
-{/*           <Typed
-            strings={['Pokémon', 'Juegos', 'Crea el tuyo!']}
-            typeSpeed={100}
-            backSpeed={100}
-            loop
-          /> */}
+
         </h2>
         <Link to="/home">
-          <button className={style.boton}>Inicio</button>
+          <button className={style.boton}>GO PokeMasters!</button>
         </Link>
       </div>
     </div>
