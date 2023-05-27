@@ -23,7 +23,9 @@ function Navbar() {
     <>
 
       <NavContainer >
-      <img src={imagenLogo} alt="Logo" style={{ width: '150px', height: '70px', zIndex: 100 }}/>
+      <a href="/">
+        <img src={imagenLogo} alt="Logo" style={{ width: '150px', height: '70px', zIndex: 100 }}/>
+      </a>
         <br/>
         {!isPokemonsPage && !isAcercaPage && <SearchBar/>}
         <div className={`links ${clicked ? 'active' : ''}`}>
