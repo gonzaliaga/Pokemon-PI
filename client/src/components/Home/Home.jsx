@@ -8,7 +8,6 @@ import Navbar from '../Navbar/Navbar';
 import random from '../../images/random.png';
 import style from './Home.module.css';
 import poke from '../../images/pokebola.png';
-/* import game from '../../images/game.png'; */
 import Footer from "../footer/footer";
 
 
@@ -22,7 +21,7 @@ export default function Home() {
     const [pokLoaded, /* setPokLoaded */] = useState(all.length ? true : false)
     const [/* orden */, setOrden] = useState('')
     const [currentPage, setCurrentPage] = useState(1);
-    const [pokemonsPerPage, /* setPokemonsPerPage */] = useState(8)
+    const [pokemonsPerPage, /* setPokemonsPerPage */] = useState(12)
     const indexOfLastPokemon = currentPage * pokemonsPerPage;
     const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage;
     const currentPokemons = allPokemons.slice(indexOfFirstPokemon, indexOfLastPokemon)
@@ -67,13 +66,12 @@ export default function Home() {
     return (
         <div className={style.home}>
             <div className={style.nav}>
-            <Navbar />
+                <Navbar />
             </div>
 
 
-            <br/>
-{/*              {<Link to='/game' style={{ textDecoration: 'none' }} className={style.game}><button className={style.poke}><img src={game} alt="Who's that Pokemon" width='100px' /></button></Link>}
- */}            <div className={style.sortfilter}>
+            <br />
+            <div className={style.sortfilter}>
 
                 <select onChange={e => handleSort(e)}>
                     <option value="normal">Normal</option>
@@ -95,18 +93,18 @@ export default function Home() {
                         ))
                     }
                 </select>
-                <br/>
-                <button  onClick={e => { handleClick(e) }} className={style.poke}><img src={poke} alt="pokebola" width='20px' /> Recargar!</button>
+                <br />
+                <button onClick={e => { handleClick(e) }} className={style.poke}><img src={poke} alt="pokebola" width='20px' /> Recargar!</button>
             </div>
-            <br/>
+            <br />
             <Paginado
                 pokemonsPerPage={pokemonsPerPage}
                 allPokemons={allPokemons.length}
                 paginado={paginado}
                 page={currentPage}
             />
-            <br/>
-            <br/>
+            <br />
+            <br />
             <div className={style.cards}>
                 {
                     currentPokemons.length ?
@@ -121,11 +119,11 @@ export default function Home() {
                                 )
                             }) :
                             <div className={style.notfound}>
-                                <img src='images/notfound.png' alt="Pokemon not found" width='200px' />
-                                <span>{currentPokemons[0]} not found</span>
+                                <img src='images/pkbolavacia.png' alt="Pokemon not found" width='200px' />
+                                <span>{currentPokemons[0]} NO Encontrado</span>
                             </div>
                         :
-                        <div className={style.loading}>
+                        <div className={style.loading} style={{ zIndex: 20 }}>
                             <img src='images/loading.gif' alt="Loading.." width='250px' />
                             <p className={style.loadingtext}>Cargando...</p>
                         </div>
@@ -133,5 +131,7 @@ export default function Home() {
             </div>
             <Footer />
         </div>
+
     )
+
 }

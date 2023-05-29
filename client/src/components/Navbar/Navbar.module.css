@@ -1,6 +1,6 @@
 .navContainer {
     padding: 0.4rem;
-    background-color: #333;
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(35,5,160,1) 76%, rgba(31,2,98,1) 100%);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,6 +21,7 @@
     text-decoration: none;
     margin-right: 1rem;
   }
+  
   
   .navContainer .links {
     position: absolute;

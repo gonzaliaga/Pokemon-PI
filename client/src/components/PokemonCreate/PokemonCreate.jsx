@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import {useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { postPokemon, getTypes, getPokemons } from '../../actions/index';
 import style from './PokemonCreate.module.css'
 import validate from './validate.js';
 import Oak from '../../images/portada.png'
 import swal from 'sweetalert';
-/* import Navbar from '../Navbar/Navbar';
-import Footer from "../footer/footer"; */
+import Navbar from '../Navbar/Navbar';
+/* import Footer from "../footer/footer"; */
 
 
 export default function PokemonCreate(){
@@ -135,8 +135,9 @@ export default function PokemonCreate(){
             
            
             <img src={Oak} alt="Pikachu" height="560px" className={style.img}/>
-            <Link to='/home' className={style.back} style={{textDecoration: 'none'}}><button>Volver al Home</button></Link>
+            {/* <Link to='/home' className={style.back} style={{textDecoration: 'none'}}><button>Volver al Home</button></Link> */}
             <div className={style.container}>
+            <Navbar/>
                 <div className={style.header}>
                     <h2>Crea tu Pokémon!</h2>
                 </div>
