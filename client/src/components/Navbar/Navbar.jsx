@@ -28,7 +28,7 @@ function Navbar() {
         </a>
         <br />
         <div ClassName='search'>
-          {!isPokemonsPage && !isAcercaPage && <SearchBar style={{ marginLeft: '300px' }} />}
+          {!isPokemonsPage && /* !isAcercaPage &&  */<SearchBar style={{ marginLeft: '300px' }} />}
         </div>
         <div className={`links ${clicked ? 'active' : ''}`}>
           {!isHomePage && <a onClick={handleClick} href="/home">Inicio</a>}
@@ -89,11 +89,23 @@ border-bottom: 10px;
     transition: all .6s ease;
     z-indez: 20;
     a{
+      box-shadow: 0 0 40px 40px #801105 inset, 0 0 0 0 #801105;
+      box-sizing: border-box;
+      border: 3px solid #801105;
+      border-radius: 0.6em;
+      padding: 0.5em 1em;
+
       color: white;
       font-size: 2rem;
       display: block;
-    
     }
+    a:hover{
+
+      box-shadow: 0 0 10px 0 #801105 inset, 0 0 10px 4px #000a3f;
+      transition: all 100ms ease-in-out;
+    }
+
+    
     @media(min-width: 768px){
       position: initial;
       margin: 0;
@@ -106,7 +118,7 @@ border-bottom: 10px;
     }
   }
   .links.active{
-    width: 100%;
+    width: 20%;
     display: block;
     position: absolute;
     margin-left: auto;
@@ -117,10 +129,16 @@ border-bottom: 10px;
     text-align: center;
     z-index: 20;
     a{
+      text-align: center;
       font-size: 1rem;
       margin-top: 2rem;
       color: white;
-    
+      box-shadow: 0 0 40px 40px #801105 inset, 0 0 0 0 #801105;
+    }
+    a:hover{
+
+      box-shadow: 0 0 10px 0 #801105 inset, 0 0 10px 4px #000a3f;
+      transition: all 100ms ease-in-out;
     }
   }
   .burguer{
