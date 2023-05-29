@@ -23,20 +23,26 @@ function Navbar() {
     <>
 
       <NavContainer >
-      <a href="/">
-        <img src={imagenLogo} alt="Logo" style={{ width: '150px', height: '70px', zIndex: 100 }}/>
-      </a>
-        <br/>
-        {!isPokemonsPage && !isAcercaPage && <SearchBar/>}
+        <a href="/">
+          <img src={imagenLogo} alt="Logo" style={{ width: '150px', height: '70px', zIndex: 100 }} />
+        </a>
+        <br />
+        <div ClassName='search'>
+          {!isPokemonsPage && !isAcercaPage && <SearchBar style={{ marginLeft: '300px' }} />}
+        </div>
         <div className={`links ${clicked ? 'active' : ''}`}>
-        {!isHomePage && <a onClick={handleClick} href="/home">Inicio</a>}
-        {!isPokemonsPage && <a onClick={handleClick} href="/pokemons">Crear</a>}
-        {!isAcercaPage && <a onClick={handleClick} href="/acerca">Acerca</a>}
+          {!isHomePage && <a onClick={handleClick} href="/home">Inicio</a>}
+          {!isPokemonsPage && <a onClick={handleClick} href="/pokemons">Crear</a>}
+          {!isAcercaPage && <a onClick={handleClick} href="/acerca">Acerca</a>}
         </div>
         <div className='burguer'>
           <BurguerButton clicked={clicked} handleClick={handleClick} />
         </div>
-        <BgDiv className={`initial ${clicked ? ' active' : ''}`}></BgDiv>
+        <BgDiv className={`initial ${clicked ? ' active' : ''}`}>
+          <a href="/">
+            <img src={imagenLogo} alt="Logo" style={{ width: '150px', height: '70px', zIndex: 100, float: 'left' }} />
+          </a>
+        </BgDiv>
       </NavContainer>
     </>
   )
@@ -45,7 +51,8 @@ function Navbar() {
 export default Navbar
 
 const NavContainer = styled.nav`
-border-top: 10px;
+height: 6vh;
+border-top: 5px solid black;
 border-bottom: 10px;
   h2{
     color: white;
@@ -55,10 +62,12 @@ border-bottom: 10px;
     }
   }
   img {
-    z-indez:1;
+    margin-top: 20px;
+    margin-left: 20px;
+    z-indez: 150;
   }
   padding: .8rem;
-  background-color: rgba(0, 10, 63, 0.5);
+  background-color: rgba(0, 10, 63, 0.9);
   /* background: linear-gradient(0deg, rgba(4,0,18,1) 1%, rgba(0,28,177,1) 4%, rgba(30,2,146,1) 65%, rgba(31,2,98,1) 89%, rgba(1,8,46,1) 100%); */
   display: flex;
   flexDirection: column;
@@ -67,7 +76,7 @@ border-bottom: 10px;
   a{
     color: white;
     text-decoration: none;
-    margin-right: 1rem;
+    margin-right: 2rem;
   }
   .links{
     position: absolute;
@@ -108,8 +117,8 @@ border-bottom: 10px;
     text-align: center;
     z-index: 20;
     a{
-      font-size: 2rem;
-      margin-top: 1rem;
+      font-size: 1rem;
+      margin-top: 2rem;
       color: white;
     
     }
@@ -120,6 +129,8 @@ border-bottom: 10px;
     }
     z-index: 20;
   }
+
+
 `
 
 const BgDiv = styled.div`
@@ -133,12 +144,21 @@ const BgDiv = styled.div`
   transition: all .6s ease ;
   
   &.active{
+    border-top: 5px solid black;
     border-radius: 0 0 80% 0;
     top: 0;
     left: 0;
     width: 100%;
-    height: 300px;
+    height: 200px;
     z-index: 1;
-    
+    img {
+      align: left;
+      transition: all .4s ease ;
+    }
+  }
+  .search {
+
+    align-items: left;
+
   }
 `

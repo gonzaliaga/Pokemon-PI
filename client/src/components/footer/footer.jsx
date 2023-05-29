@@ -18,17 +18,17 @@ const Footer = () => {
         <h3 className="name2" >Redes Sociales</h3>
         <ul className="icon-row">
           <li>
-            <a href="https://www.linkedin.com/in/gonzalo-cuellar-aliaga-4530559a" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/gonzalo-cuellar-aliaga-4530559a" target="_blank" rel="noreferrer" alt="LinKedin">
               <div className="icon-linkedin"></div>
             </a>
           </li>
           <li>
-            <a href="https://github.com/gonzaliaga" target="_blank" rel="noreferrer">
+            <a href="https://github.com/gonzaliaga" target="_blank" rel="noreferrer" alt="Repositorio Github">
               <div className="icon-github"></div>
             </a>
           </li>
           <li>
-            <a href="https://wa.link/nf9h8x" target="_blank" rel="noreferrer">
+            <a href="https://wa.link/nf9h8x" target="_blank" rel="noreferrer" alt="Chat WtsApp">
               <div className="icon-wtsapp"></div>
             </a>
           </li>
@@ -38,8 +38,8 @@ const Footer = () => {
       <div className="footer__column">
         <h3 className="name3"> Pokémon Game</h3>
         <ul>
-          <li className="icon-row">
-            <a href="../Game">
+          <li className="icon-row" >
+            <a href="../Game" alt="Game Pokémon">
               <div className="icon-pokemon"></div>
             </a>
           </li>
