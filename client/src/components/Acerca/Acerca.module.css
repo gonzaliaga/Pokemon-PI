@@ -122,3 +122,19 @@
     color: red;
 }
 
+@media screen and (max-width: 768px) {
+    .container {
+      width: 90%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  
+    .pagina {
+      justify-content: center;
+    }
+  
+    .img {
+      margin-top: 5%;
+    }
+  }
+
