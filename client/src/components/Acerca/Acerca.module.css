@@ -8,7 +8,7 @@
   }
   
 .pagina{
-    background-image: linear-gradient( 109.6deg,  rgba(61,131,97,1) 11.2%, rgba(28,103,88,1) 91.1% );
+    background-image: rgb(79, 79, 79);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -39,14 +39,6 @@
     object-fit: cover;
   }
 
-
-
-.img{
-    margin-right: 5%;
-    margin-left: 5%;
-    margin-top: 20%;
-}
-
 .back{
     position: fixed;
     left: 8%;
@@ -54,7 +46,7 @@
 }
 
 .container{
-    background-color: rgba(255, 255, 255, 0.452);
+    background-color: rgba(255, 255, 255, 0.45);
     border-radius: 10px;
     border-top: 2px solid black;
     border-right: 2px solid black;
@@ -68,7 +60,7 @@
     padding-bottom: 4%;
     position: relative;
     margin-bottom: 0.5%;
-    margin-top: 15%;
+    margin-top: 12%;
     margin-right: 0.4%;
     margin-left: 2%;
     z-index: 20;
@@ -76,13 +68,10 @@
 
 .header{
     color: white;
-    background-color: rgb(144, 23, 4);
+    background-color: rgba(144, 23, 4, 0.7);
     padding: 20px 40px;
     /* border-bottom: 1px solid #f0f0f0 */;
     border-bottom: 10px solid rgb(0, 0, 0);
-
-
-
 }
 .text {
     text-align: left;
@@ -91,5 +80,45 @@
     font-size: 12px;
     margin: 10px;
     line-height: 1.5;
+}
+
+.text1 {
+    text-align: left;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 8px;
+    margin: 10px;
+    line-height: 1.5;
+}
+
+.text2 {
+    text-align: center;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 10px;
+
+}
+
+.img{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 30px;
+}
+
+.img img {
+    margin: 5px;
+}
+
+.prepare{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: red;
 }
 

@@ -119,8 +119,8 @@ export default function Home() {
                                 )
                             }) :
                             <div className={style.notfound}>
-                                <img src='images/notfound.png' alt="Pokemon not found" width='200px' />
-                                <span>{currentPokemons[0]} not found</span>
+                                <img src='images/pkbolavacia.png' alt="Pokemon not found" width='200px' />
+                                <span>{currentPokemons[0]} NO Encontrado</span>
                             </div>
                         :
                         <div className={style.loading} style={{ zIndex: 20 }}>
