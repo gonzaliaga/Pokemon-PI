@@ -3,6 +3,8 @@ const { Router } = require('express');
 // Ejemplo: const authRouter = require('./auth.js');
 const axios = require('axios')
 const { Pokemon, Type } = require('../db.js');
+require('dotenv').config();
+const {DB_URL, DB_URL_TYPES} = process.env;
 
 const router = Router();
 
@@ -43,7 +45,7 @@ const evolution = async (evol) => {
     do {
       let evoDetails = evoData['evolution_details'][0];
       const apiPokeUrl = await axios.get(
-        "https://pokeapi.co/api/v2/pokemon/" + evoData.species.name
+        DB_URL + evoData.species.name
       );
 
       let result = {
@@ -80,7 +82,7 @@ const evolution = async (evol) => {
 
 
 const getApiInfo = async () => {
-    const apiUrl = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=100");
+    const apiUrl = await axios.get("DB_URL?limit=100");
     const results = apiUrl.data.results
 
     const pokemonInfo = []
@@ -148,7 +150,7 @@ const getAllPokemons = async () => {
 
 const getPokeInfo = async (id) => {
   try {
-    const apiPokeUrl = await axios.get("https://pokeapi.co/api/v2/pokemon/" + id);
+    const apiPokeUrl = await axios.get(DB_URL + id);
     const results = apiPokeUrl.data
     const apiPokeSpecie = await axios.get(results.species.url)
     const speciesresult = apiPokeSpecie.data
@@ -199,7 +201,7 @@ const getPokeInfo = async (id) => {
 const getPokeInfoxName = async (name) => {
   try {
     const apiPokeUrl = await axios.get(
-      "https://pokeapi.co/api/v2/pokemon/" + name
+      DB_URL + name
     );
     const results = apiPokeUrl.data;
 
@@ -246,7 +248,7 @@ router.get("/pokemons", async (req, res) => {
 });
 
 router.get('/types', async (req, res) => {
-  const typesApi = await axios.get("https://pokeapi.co/api/v2/type");
+  const typesApi = await axios.get(DB_URL_TYPES);
   const types = typesApi.data.results;
 
   types.forEach( el => {
