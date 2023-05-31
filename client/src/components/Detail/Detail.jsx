@@ -67,9 +67,10 @@ export default function Detail (props){
             {
                 myPokemon.length && myPokemon[0].id == props.match.params.id ? 
                 <div className={style.grid} style={{maxHeight:'100vh'}}> 
-                <Link to='/home' className={style.home}><button className={style.homebtn}>Back</button></Link>
+                <Link to='/home' className={style.home}><button className={style.homebtn}>Atrás</button></Link>
                     <div className={style.encabezado}> 
                         <h1 className={style.name}>{myPokemon[0].name.charAt(0).toUpperCase() + myPokemon[0].name.slice(1)}</h1> 
+                        
                         <p>#{myPokemon[0].id}</p>
                     </div>
                     <nav className={style.sections} style={{position:'relative'}}>
@@ -80,8 +81,8 @@ export default function Detail (props){
                     <div className={style.visual}>
                         {
                             pokemonssbu.hasOwnProperty(myPokemon[0].name) ?
-                            <img src={pokemonssbu[myPokemon[0].name]} className={style.img}/> :
-                            <img src={myPokemon[0].img ? myPokemon[0].img : random} className={style.img}/>
+                            <img src={pokemonssbu[myPokemon[0].name]} alt={myPokemon[0].name} className={style.img}/> :
+                            <img src={myPokemon[0].img ? myPokemon[0].img : random} alt="Random Pic" className={style.img}/>
                         }
                         
                         <div className={style.types}>
