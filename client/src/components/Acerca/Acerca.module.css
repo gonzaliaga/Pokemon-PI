@@ -13,7 +13,7 @@
     background-attachment: fixed;
     background-size: cover;
     height: 100%;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     z-index: 20;
@@ -57,10 +57,10 @@
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
     right: 50%;
-    padding-bottom: 4%;
+    padding-bottom: 2%;
     position: relative;
     margin-bottom: 0.5%;
-    margin-top: 12%;
+    margin-top: 10%;
     margin-right: 0.4%;
     margin-left: 2%;
     z-index: 20;
@@ -121,4 +121,20 @@
     font-weight: bold;
     color: red;
 }
+
+/* @media screen and (max-width: 768px) {
+    .container {
+      width: 90%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  
+    .pagina {
+      justify-content: center;
+    }
+  
+    .img {
+      margin-top: 5%;
+    }
+  } */
 

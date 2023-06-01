@@ -5,6 +5,7 @@ import axios from 'axios';
 
 const PokemonAPI = () => {
   const [pokemonData, setPokemonData] = useState(null);
+  const [pokemonName, setPokemonName] = useState('');
 
   useEffect(() => {
     const fetchPokemonData = async () => {
@@ -18,14 +19,18 @@ const PokemonAPI = () => {
       }
     };
 
-    fetchPokemonData();
-  }, []);
+    if (pokemonName !== '') {
+      fetchPokemonData();
+    }
+  }, [pokemonName]);
 
   const PokemonModel = () => {
     const mesh = useRef();
 
     useFrame(() => {
-      mesh.current.rotation.y += 0.01;
+      if (mesh.current) {
+        mesh.current.rotation.y += 0.01;
+      }
     });
 
     if (!pokemonData) {
@@ -47,10 +52,9 @@ const PokemonAPI = () => {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    const pokemonName = event.target.elements.pokemonName.value;
+    const name = event.target.elements.pokemonName.value;
+    setPokemonName(name);
     setPokemonData(null); // Clear previous data
-    // Fetch Pokemon data
-    // ...
   };
 
   return (
