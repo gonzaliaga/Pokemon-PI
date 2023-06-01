@@ -83,7 +83,7 @@ const evolution = async (evol) => {
 
 
 const getApiInfo = async () => {
-    const apiUrl = await axios.get(`${DB_URL}?limit=100`);
+    const apiUrl = await axios.get(`${DB_URL}/?limit=100`);
     const results = apiUrl.data.results
 
     const pokemonInfo = []
@@ -151,7 +151,7 @@ const getAllPokemons = async () => {
 
 const getPokeInfo = async (id) => {
   try {
-    const apiPokeUrl = await axios.get(DB_URL + id);
+    const apiPokeUrl = await axios.get(`${DB_URL}/${id}`);
     const results = apiPokeUrl.data
     const apiPokeSpecie = await axios.get(results.species.url)
     const speciesresult = apiPokeSpecie.data
@@ -202,7 +202,7 @@ const getPokeInfo = async (id) => {
 const getPokeInfoxName = async (name) => {
   try {
     const apiPokeUrl = await axios.get(
-      DB_URL + name
+      `${DB_URL}/${name}`
     );
     const results = apiPokeUrl.data;
 
@@ -249,7 +249,7 @@ router.get("/pokemons", async (req, res) => {
 });
 
 router.get('/types', async (req, res) => {
-  const typesApi = await axios.get(DB_URL_TYPES);
+  const typesApi = await axios.get(`${DB_URL_TYPES}`);
   const types = typesApi.data.results;
 
   types.forEach( el => {
