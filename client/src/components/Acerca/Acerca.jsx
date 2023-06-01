@@ -30,16 +30,16 @@ export default function Acerca() {
           <br />
           <div className={style.text}>
             <p>Llegaste a la página más importante del proyecto, estás en ese lugar en donde muchos quieren conocer...
-               y todo comienza con una Historia, atrapante, intrigante, y solo te lo contaré a ti.</p>
+               y todo comienza con una Historia:</p>{/* </p> atrapante, intrigante, y solo te lo contaré a ti.
             <p>En este punto no existen los proyectos de Pokémones, ni Paises, videojuegos, Food, Dogs ni nada, 
               solo tú y la pantalla.</p>
-            <p className={style.prepare}> Prepárate...</p>
-            <p>Corría el año 2023, mes enero, día 2, empecé en Henry, conociendo tecnologías como <b>NodeJS</b>, <b>JS</b>, Luego <b>REACT</b>, <b>Redux</b>, <b>PostgreSQL</b> y otras mas,
-              Se formo un grupo maravilloso que se llama <b>"Los Mapaches"</b>, parte tambien de la Tecnología <b>"humana"</b></p>
+            <p className={style.prepare}> Prepárate...</p> */}
+            <p>Corría el año 2023, mes enero, día 2, Inicié los estudios en Henry, estudiando tecnologías como <b>JS - Avanzado</b>, <b>NodeJS</b>, Luego <b>REACT</b>, <b>Redux</b>, <b>PostgreSQL</b> y otras mas,
+              Formamos un grupo maravilloso que se llama <b>"Los Mapaches"</b>, parte tambien de la Tecnología <b>"humana"</b></p>
             <p>Este Proyecto individual es sobre <b>Pokémon</b>, se siguieron todos los pasos del README que se dio, mas otras cosillas que son necesarias para su funcionamiento,
-              estoy orgulloso de lo que hice, mas alla que siempre anduve en tecnología, siempre fui una persona de Back End y estructuras lógicas, NUNCA hice un frontEnd, y puedo decir que me encantó.
+              estoy orgulloso de lo que hice, mas allá que siempre anduve en tecnología, siempre fui una persona de Back End y estructuras lógicas, NUNCA hice un Front End, y puedo decir que me encantó.
               Aprendi muchas cosas y me encontré con una parte creativa que no sabia que tenia.<br/>
-              Este es mi Proyecto,espero que te guste.
+              Este es mi <b>Proyecto</b>,espero que te guste.
             </p>
             <p className={style.text2}><b>Gonzalo</b></p>
           </div>

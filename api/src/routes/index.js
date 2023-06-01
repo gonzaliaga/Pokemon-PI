@@ -83,7 +83,7 @@ const evolution = async (evol) => {
 
 
 const getApiInfo = async () => {
-    const apiUrl = await axios.get("DB_URL?limit=100");
+    const apiUrl = await axios.get(`${DB_URL}?limit=100`);
     const results = apiUrl.data.results
 
     const pokemonInfo = []
