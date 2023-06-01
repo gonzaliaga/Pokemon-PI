@@ -7,6 +7,7 @@ import Detail from './components/Detail/Detail'
 import Game from './components/Game/Game';
 import Acerca from './components/Acerca/Acerca.jsx';
 import notFound from './components/404/404.jsx';
+/* import PokemonAPI from './components/pokefake/PokemonAPI' */
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/home/:id" component={Detail}/>
           <Route exact path="/acerca" component={Acerca}/>
           <Route path="*" component={notFound}/>
+          {/* <Route exact path="/fake" component={PokemonAPI}/> */} 
         </Switch>
       </div>
     </BrowserRouter>
