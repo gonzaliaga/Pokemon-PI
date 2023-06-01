@@ -6,6 +6,7 @@ import PokemonCreate from './components/PokemonCreate/PokemonCreate'
 import Detail from './components/Detail/Detail'
 import Game from './components/Game/Game';
 import Acerca from './components/Acerca/Acerca.jsx';
+import notFound from './components/404/404.jsx';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/pokemons" component={PokemonCreate}/>
           <Route exact path="/home/:id" component={Detail}/>
           <Route exact path="/acerca" component={Acerca}/>
+          <Route path="*" component={notFound}/>
         </Switch>
       </div>
     </BrowserRouter>
