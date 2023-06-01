@@ -10,7 +10,7 @@ require('dotenv').config();
 const router = Router();
 
 // Configurar los routers
-
+// Ejemplo: router.use('/auth', authRouter);
 const random = (arrlength) => {
   let number = Math.floor(Math.random() * arrlength);
   return number
@@ -83,7 +83,7 @@ const evolution = async (evol) => {
 
 
 const getApiInfo = async () => {
-    const apiUrl = await axios.get(`${DB_URL}?limit=100`);
+    const apiUrl = await axios.get("DB_URL?limit=100");
     const results = apiUrl.data.results
 
     const pokemonInfo = []
