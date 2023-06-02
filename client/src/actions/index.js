@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export function getPokemons(){
     return async function(dispatch){
-        var json = await axios.get("http://localhost:3001/pokemons",{
+        var json = await axios.get("https://pokemon-pi-production-e9d2.up.railway.app/pokemons",{
 
         })
         
@@ -21,7 +21,7 @@ export function reloadPokemons(){
 
 export function getTypes(){
     return async function(dispatch){
-        var info = await axios.get("http://localhost:3001/types",{
+        var info = await axios.get("https://pokemon-pi-production-e9d2.up.railway.app/types",{
 
         })
 
@@ -34,7 +34,7 @@ export function getTypes(){
 
 export function postPokemon(payload){
     return async function(dispatch){
-        const pokemon = await axios.post("http://localhost:3001/pokemons", payload)
+        const pokemon = await axios.post("https://pokemon-pi-production-e9d2.up.railway.app/pokemons", payload)
         
         return {
             type:"POST_POKEMON",
@@ -46,7 +46,7 @@ export function postPokemon(payload){
 export function getPokemonName(name){
     return async function (dispatch){
         try{
-            const json = await axios.get("http://localhost:3001/pokemons?name=" + name)
+            const json = await axios.get("https://pokemon-pi-production-e9d2.up.railway.app/pokemons?name=" + name)
             // console.log(json.data)
 
             return dispatch({
@@ -66,7 +66,7 @@ export function getPokemonName(name){
 export function getDetail (id){
     return async function (dispatch){
         try{
-            let json = await axios.get("http://localhost:3001/pokemons/" + id);
+            let json = await axios.get("https://pokemon-pi-production-e9d2.up.railway.app/pokemons/" + id);
 
             return dispatch({
                 type:"GET_DETAILS",
