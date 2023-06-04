@@ -1,4 +1,4 @@
-
+      
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import BurguerButton from './BurgerButton'
@@ -24,7 +24,7 @@ function Navbar() {
 
       <NavContainer >
         <a href="/">
-          <img src={imagenLogo} alt="Logo" style={{ width: '150px', height: '70px', zIndex: 100 }} />
+          <img src={imagenLogo} alt="Logo" style={{ width: '150px', height: '70px', zIndex: 100, float: 'left' }} />
         </a>
         <br />
         <div ClassName='search'>
@@ -62,9 +62,15 @@ border-bottom: 10px;
     }
   }
   img {
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 10px;
+    margin-left: 3px;
     z-indez: 150;
+  }
+  logo{
+    width: 150px;
+    height: 70px;
+    z-index: 100;
+    float: left;
   }
   padding: .8rem;
   background-color: rgba(0, 10, 63, 0.9);
@@ -77,6 +83,7 @@ border-bottom: 10px;
     color: white;
     text-decoration: none;
     margin-right: 2rem;
+    margin-left: 1px;
   }
   .links{
     position: absolute;
@@ -118,12 +125,12 @@ border-bottom: 10px;
     }
   }
   .links.active{
-    width: 20%;
+    width: 35%;
     display: block;
     position: absolute;
     margin-left: auto;
-    margin-right: auto;
-    top: 30%;
+    margin-right: 50px;
+    top: 3px;
     left: 0;
     right: 0;
     text-align: center;
@@ -170,7 +177,9 @@ const BgDiv = styled.div`
     height: 200px;
     z-index: 1;
     img {
+      margin-left: 3px;
       align: left;
+      width: 80%;
       transition: all .4s ease ;
     }
   }
