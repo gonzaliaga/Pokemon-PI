@@ -19,3 +19,18 @@
     display: flex;
     justify-content: center;
 }
+
+@media only screen and (max-width: 370px) {
+  .buttons {
+    --size: 24px;
+    --margin: 4px;
+    padding: 2 4px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .buttons {
+    --size: 20px;
+    --margin: 2px;
+    padding: 0 2px;
+  }
+}
