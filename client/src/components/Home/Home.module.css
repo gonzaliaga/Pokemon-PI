@@ -107,13 +107,13 @@ select {
 /* Loading  */
 
 .loading{
+  left: 0px;
     position: absolute;
     margin: 0;
     width: 100%;
     max-height: 50vh;
     background: #232631;
-    padding-top: 5%;
-    
+    /* padding-top: 5%; */    
 }
 
 .loadingtext{

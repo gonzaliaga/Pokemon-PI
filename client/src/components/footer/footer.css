@@ -1,5 +1,5 @@
 .footer {
-  height: 70px;
+  height: auto;
   background-color: rgba(64, 57, 84, 0.8);
   color: white;
   padding: 20px;
@@ -34,17 +34,16 @@
 .footer__column ul li {
   margin-bottom: 5px;
   align-items: left;
-
 }
 
 .name {
   margin-left: 4%;
+  margin-right: 2%;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: bolder;
   color: white;
   text-align: left;
-
 }
 
 .name2 {
@@ -53,7 +52,6 @@
   font-weight: bolder;
   color: white;
   text-align: center;
-
 }
 
 .name3 {
@@ -66,13 +64,12 @@
   font-weight: bolder;
   color: white;
   text-align: center;
-
 }
 
 .sub {
   margin-left: 5%;
   font-family: 'Poppins', sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   color: aliceblue;
   text-align: left;
 }
@@ -96,14 +93,10 @@
   background-image: url(../../images/iconos/linkedin.png);
   background-size: cover;
   margin-right: 10px;
-  /* Espacio horizontal entre los iconos */
-
 }
 
 .icon-linkedin:hover {
-
   transform: rotate3d(1, 2.0, 3.0, 20deg);
-  /*     filter: drop-shadow(0 0 0.75rem rgb(244, 242, 242)); */
 }
 
 .icon-github {
@@ -113,12 +106,10 @@
   background-image: url(../../images/iconos/github.png);
   background-size: cover;
   margin-right: 10px;
-  /* Espacio horizontal entre los iconos */
 }
 
 .icon-github:hover {
   transform: rotate3d(1, 2.0, 3.0, 20deg);
-
 }
 
 .icon-wtsapp {
@@ -128,12 +119,10 @@
   background-image: url(../../images/iconos/wtsapp.png);
   background-size: cover;
   margin-right: 10px;
-  /* Espacio horizontal entre los iconos */
 }
 
 .icon-wtsapp:hover {
   transform: rotate3d(1, 2.0, 3.0, 20deg);
-  /*       filter: drop-shadow(0 0 0.75rem rgb(244, 242, 242)); */
 }
 
 .icon-pokemon {
@@ -143,9 +132,74 @@
   background-image: url(../../images/game.png);
   background-size: cover;
   margin-right: 10px;
-  /* Espacio horizontal entre los iconos */
 }
 
 .icon-pokemon:hover {
   transform: rotate3d(1, 2.0, 3.0, 20deg);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer__column,
+  .footer__column2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items:flex-start;
+    text-align: right;
+    /* margin-bottom: 20px; */
+  }
+  .name,
+  .name2,
+  .name3{
+    margin-left: 0.5%;
+    margin-right: 5px;
+    font-size: 11px;
+  }
+  .sub{
+    font-size: 10px;
+    margin-left: 10px;
+    margin-right: 0;
+    text-align: right;
+  }
+
+  .icon-row{
+    margin-right: 0.5%;
+    justify-content: right;
+    align-items: end;
+    border-bottom: 5px white;
+
+  }
+}
+
+@media (max-width: 380px) {
+
+
+  .footer__column h3,
+  .name {
+    text-align: left;
+  }
+
+  .icon-row {
+    margin-left: auto;
+    margin-right: 1px;
+/*     justify-content: flex-end; */
+    display: flex;
+
+  }
+
+  .icon-linkedin,
+  .icon-github,
+  .icon-wtsapp {
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+
+  }
+  .icon-pokemon {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+
+  }
 }
