@@ -106,3 +106,10 @@ export function orderByNameOrStrengh(payload){
         payload
     }
 }
+
+export function deletePokemon(payload){
+    return{
+        type:"DELETE_POKEMON",
+        payload
+    }
+}
