@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footer__column">
         <h3 className="name" >APP Pokémon™</h3>
         <ul>
-          <li className="sub">Gonzalo Cuéllar Aliaga</li>
+          <li className="sub">Creado por Gonzalo Cuéllar Aliaga</li>
           <li className="sub">Copyright© {currentYear}</li>
         </ul>
       </div>
