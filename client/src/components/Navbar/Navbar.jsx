@@ -27,7 +27,7 @@ function Navbar() {
           <img src={imagenLogo} alt="Logo" style={{ width: '150px', height: '70px', zIndex: 100, float: 'left' }} />
         </a>
         <br />
-        <div ClassName='search'>
+        <div className='search'>
           {!isPokemonsPage && /* !isAcercaPage &&  */<SearchBar style={{ marginLeft: '300px' }} />}
         </div>
         <div className={`links ${clicked ? 'active' : ''}`}>

@@ -27,7 +27,7 @@ export default function LandingPage() {
 
         </h2>
         <Link to="/home">
-          <button className={style.boton}>GO POKEMasters!</button>
+          <button className={style.boton}>GO POKE-Masters!</button>
         </Link>
       </div>
     </div>
