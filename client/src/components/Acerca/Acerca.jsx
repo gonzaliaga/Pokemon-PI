@@ -5,7 +5,6 @@ import css3 from '../../images/iconos/css3.png';
 import pgs from '../../images/iconos/postgres.png';
 import JS from '../../images/iconos/JavaScript.png';
 import node from '../../images/iconos/nodeJS.png';
-import henry from '../../images/iconos/LOGO-HENRY.png';
 import rct from '../../images/iconos/REACT.png';
 import rdx from '../../images/iconos/redux.png';
 import mpch from '../../images/iconos/mapaches.jpg';
@@ -34,9 +33,9 @@ export default function Acerca() {
             <p>En este punto no existen los proyectos de Pokémones, ni Paises, videojuegos, Food, Dogs ni nada, 
               solo tú y la pantalla.</p>
             <p className={style.prepare}> Prepárate...</p> */}
-            <p>Corría el año 2023, mes enero, día 2, Inicié los estudios en Henry, estudiando tecnologías como <b>JS - Avanzado</b>, <b>NodeJS</b>, Luego <b>REACT</b>, <b>Redux</b>, <b>PostgreSQL</b> y otras mas,
+            <p>Corría el año 2023, mes enero, día 2, Inicié los estudios en Henry, estudiando tecnologías como <b>JS - Avanzado</b>, <b>NodeJS</b>, Luego <b>REACT</b>, <b>Redux</b>, <b>PostgreSQL</b> y otras más.<br/>
               Formamos un grupo maravilloso que se llama <b>"Los Mapaches"</b>, parte tambien de la Tecnología <b>"humana"</b></p>
-            <p>Este Proyecto individual es sobre <b>Pokémon</b>, se siguieron todos los pasos del README que se dio, mas otras cosillas que son necesarias para su funcionamiento,
+            <p>Este Proyecto individual es sobre <b>Pokémon</b>, se siguieron todos los pasos del README que se dio, mas otras cosillas divertidas que son necesarias para su funcionamiento,
               estoy orgulloso de lo que hice, mas allá que siempre anduve en tecnología, siempre fui una persona de Back End y estructuras lógicas, NUNCA hice un Front End, y puedo decir que me encantó.
               Aprendi muchas cosas y me encontré con una parte creativa que no sabia que tenia.<br/>
               Este es mi <b>Proyecto</b>,espero que te guste.
@@ -44,15 +43,14 @@ export default function Acerca() {
             <p className={style.text2}><b>Gonzalo</b></p>
           </div>
 
-              <div className={style.img}>
               <p className={style.text1}>Este proyecto se realizó con las siguientes tecnologías:</p>
+              <div className={style.img}>
                 <img src={css3} alt="CSS3" />
                 <img src={pgs} alt="PostgreSQL" />
                 <img src={node} alt="NodeJS" />
                 <img src={rct} alt="React" />
                 <img src={rdx} alt="Redux" />
                 <img src={JS} alt="JavaScript" />
-                <img src={henry} alt="Henry" />
                 <img src={mpch} alt="Mapaches" />
               </div>
 
