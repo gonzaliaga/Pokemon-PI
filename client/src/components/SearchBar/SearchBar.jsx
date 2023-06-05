@@ -49,7 +49,7 @@ export default function SearchBar() {
         <input
           className={style.searchTxt}
           type="text"
-          placeholder="Buscar Pokémon..."
+          placeholder="  Buscar  Pokémon..."
           value={name}
           onChange={(e) => handleInputChange(e)}
         />
