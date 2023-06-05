@@ -68,8 +68,6 @@ export default function Home() {
             <div className={style.nav}>
                 <Navbar />
             </div>
-
-
             <br />
             <div className={style.sortfilter}>
 
@@ -87,11 +85,9 @@ export default function Home() {
                 </select>
                 <select onChange={e => handleFilterByType(e)}>
                     <option value="All">Tipos</option>
-                    {
-                        types.map(type => (
-                            <option value={type.name} key={type.name}>{type.name}</option>
-                        ))
-                    }
+                    {types.map((type, index) => (
+                        <option key={index} value={type.name}>{type.name}</option>
+                    ))}
                 </select>
                 <br />
                 <button onClick={e => { handleClick(e) }} className={style.poke}><img src={poke} alt="pokebola" width='20px' /> Recargar!</button>
@@ -109,15 +105,13 @@ export default function Home() {
                 {
                     currentPokemons.length ?
                         typeof currentPokemons[0] === 'object' ?
-                            currentPokemons.map(el => {
-                                return (
-                                    <div>
-                                        <Link to={"/home/" + el.id} style={{ textDecoration: 'none' }} key={el.id}>
+                            currentPokemons.map(el => (
+                                    <div key={el.id}>
+                                        <Link to={"/home/" + el.id} style={{ textDecoration: 'none' }} >
                                             <Card name={el.name} types={el.types} image={el.img ? el.img : random} id={el.id} weight={el.weight} height={el.height} />
                                         </Link>
                                     </div>
-                                )
-                            }) :
+                            )) :
                             <div className={style.notfound}>
                                 <img src='images/pkbolavacia.png' alt="Pokemon not found" width='200px' />
                                 <span>{currentPokemons[0]} NO Encontrado</span>
