@@ -106,11 +106,4 @@ export function orderByNameOrStrengh(payload){
         type:"ORDER_BY_NAME_OR_STRENGH",
         payload
     }
-}
 
-export function deletePokemon(payload){
-    return{
-        type:"DELETE_POKEMON",
-        payload
-    }
-}
