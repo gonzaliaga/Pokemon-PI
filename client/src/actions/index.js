@@ -5,7 +5,7 @@ export function getPokemons(){
         var json = await axios.get("https://pokemon-pi-production-e9d2.up.railway.app/pokemons",{
 
         })
-        
+        console.log(json)
         return dispatch({
             type:"GET_POKEMONS",
             payload: json.data
@@ -65,9 +65,10 @@ export function getPokemonName(name){
 
 export function getDetail (id){
     return async function (dispatch){
+        console.log(id)
         try{
             let json = await axios.get("https://pokemon-pi-production-e9d2.up.railway.app/pokemons/" + id);
-
+            console.log(json)
             return dispatch({
                 type:"GET_DETAILS",
                 payload: json.data
