@@ -28,7 +28,7 @@ export default function Detail (props){
 
     useEffect( () => {
         dispatch(getDetail(props.match.params.id));
-    },[dispatch, props.match.params.id]) //ojo
+    },[dispatch])
 
     const myPokemon = useSelector( state => state.detail)
 
@@ -65,7 +65,7 @@ export default function Detail (props){
     return(
         <div>
             {
-                myPokemon.length && myPokemon[0].id == props.match.params.id ? (
+                myPokemon.length && myPokemon[0].id == props.match.params.id ? 
                 <div className={style.grid} style={{maxHeight:'100vh'}}> 
                 <Link to='/home' className={style.home}><button className={style.homebtn}>Atrás</button></Link>
                     <div className={style.encabezado}> 
@@ -269,7 +269,7 @@ export default function Detail (props){
                            !myPokemon[0].createdInDb ? 
                            <div className={style.evolutions}>
                             {
-                                myPokemon[0].evolution && myPokemon[0].evolution.length >= 1 ?
+                                myPokemon[0].evolution && myPokemon[0].evolution.length > 1 ?
                                 <div>
                                     <EvolutionChain pokone={myPokemon[0].evolution[0]} poktwo={myPokemon[0].evolution[1]}/>
                                     {
@@ -287,15 +287,12 @@ export default function Detail (props){
                        }
                    </section>
     
-                </div>
-                ) : (
+                </div> :
                 <div className={style.loading}> 
                     <img src={loading} alt="Loading.." width='250px'/>
                     <p className={style.loadingtext}>Loading...</p>
                 </div>
-                )
-            }    
-
+            }
         </div>
         
     )

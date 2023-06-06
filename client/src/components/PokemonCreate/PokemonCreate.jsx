@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { postPokemon, getTypes, getPokemons } from '../../actions/index';
+import { postPokemon, getTypes, getPokemons, /* deletePokemon */ } from '../../actions/index';
 import style from './PokemonCreate.module.css'
 import validate from './validate.js';
 import Oak from '../../images/portada.png'
@@ -128,6 +128,26 @@ export default function PokemonCreate(){
             swal("Debes elegir al menos un tipo!", "", "error");
         }  
     }
+
+/*     function handleDelete(id) {
+        // Aquí puedes realizar alguna confirmación antes de eliminar el Pokémon, como un modal o una alerta
+        swal({
+            title: "¿Estás seguro?",
+            text: "Una vez eliminado, no podrás recuperar este Pokémon",
+            icon: "warning",
+            buttons: ["Cancelar", "Eliminar"],
+            dangerMode: true,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                dispatch(deletePokemon(id));
+                swal("¡El Pokémon ha sido eliminado!", {
+                    icon: "success",
+                });
+            }
+        });
+    } */
+    
 
 
     return(
@@ -340,6 +360,7 @@ export default function PokemonCreate(){
                         <div style={{display:'flex', flexFlow:'row nowrap'}}> 
                             <button className={style.previous} onClick={(e) => {handleSection(e)}}>Previo</button>
                             <button className={style.create} type='submit'>Crear</button>
+
                         </div>
                         
                     </section>   

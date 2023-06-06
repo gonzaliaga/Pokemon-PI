@@ -120,6 +120,8 @@ const getApiInfo = async () => {
     return pokemonInfo;
 }
 
+
+
 const getDbInfo = async () => {
 	const data = (await Pokemon.findAll({ 
     include: {
